@@ -43,3 +43,28 @@ document.getElementById("update-btn2").addEventListener("click", function () {
 
   commentBox.value = "";
 });
+
+// keyup AEL
+document.getElementById("new-comment2").addEventListener("keyup", function (e) {
+  const myText = e.target.value;
+  console.log(myText);
+});
+
+document
+  .getElementById("delete-confirm")
+  .addEventListener("keyup", function (e) {
+    const myText = e.target.value.toLowerCase();
+    console.log(myText);
+    const delBtn = document.getElementById("delete-btn");
+    if (myText === "delete") {
+      delBtn.removeAttribute("disabled");
+    } else {
+      delBtn.setAttribute("disabled", true);
+    }
+  });
+
+document.getElementById("delete-btn").addEventListener("click", function (e) {
+  const secret = document.getElementById("secret-friend");
+  secret.style.display = "none";
+  console.log(secret)
+});
