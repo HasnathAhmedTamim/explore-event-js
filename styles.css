@@ -1,0 +1,11 @@
+.container {
+    border: 1px solid slateblue;
+    padding: 2em;
+
+    background: #E73C49;
+    /* width: 300px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
