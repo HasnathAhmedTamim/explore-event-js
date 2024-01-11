@@ -66,5 +66,43 @@ document
 document.getElementById("delete-btn").addEventListener("click", function (e) {
   const secret = document.getElementById("secret-friend");
   secret.style.display = "none";
-  console.log(secret)
+  console.log(secret);
+});
+
+
+// remove item  as set event parent 
+document
+  .getElementById("list-container")
+  .addEventListener("click", function (e) {
+    e.target.parentNode.removeChild(e.target);
+  });
+
+// for (const item of items) {
+//   // console.log(items);
+//   item.addEventListener("click", function (e) {
+//     // console.log(e.target);
+//     e.target.parentNode.removeChild(e.target);
+//   });
+// }
+
+//add event delegate 
+document.getElementById("add-btn").addEventListener("click", function () {
+  //   console.log("clicked");
+  const commentBox2 = document.getElementById("new-comment-2");
+
+  //getComment from text area
+  const newComment2 = commentBox2.value;
+  //   console.log(newComment);
+
+  //set that comment
+
+  const commentContainer = document.getElementById("list-container");
+  const li = document.createElement("li");
+
+  li.innerText = newComment2;
+
+  //   clear textarea
+  commentContainer.appendChild(li);
+
+  commentBox2.value = "";
 });
